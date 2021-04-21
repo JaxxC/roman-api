@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Models\{ConvertHistory, ConvertStat};
+use App\Models\ConvertStat;
 use Carbon\Carbon;
 
 class ConvertService
@@ -30,6 +30,7 @@ class ConvertService
         $this->converted = '';
         $this->requestTime = Carbon::now();
         $processingNumber = $this->number;
+        
         do {
             $roman = array_pop($this->convertTable);
             $arabic = array_pop($this->convertTable);
